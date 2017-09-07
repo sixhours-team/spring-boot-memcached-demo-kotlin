@@ -1,0 +1,3 @@
+memcached:
+  cache:
+    servers: memcached:11211
