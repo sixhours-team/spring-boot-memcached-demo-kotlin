@@ -24,6 +24,7 @@ To start a memcached server and the demo application, run:
 You should now be able to access REST endpoints e.g.
 
 http://localhost:8080/books (not cached)
+
 http://localhost:8080/books/Kotlin (cached)
 
 To stop and remove the containers, run:
