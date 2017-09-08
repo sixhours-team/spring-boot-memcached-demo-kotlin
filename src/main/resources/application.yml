@@ -1,3 +1,4 @@
 memcached:
   cache:
     servers: memcached:11211
+    expiration: 8600
