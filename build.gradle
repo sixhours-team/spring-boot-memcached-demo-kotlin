@@ -26,7 +26,7 @@ repositories {
 dependencies {
     compile 'org.jetbrains.kotlin:kotlin-stdlib'
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'io.sixhours:memcached-spring-boot-starter:1.0.0'
+    compile 'io.sixhours:memcached-spring-boot-starter:1.0.1'
 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }

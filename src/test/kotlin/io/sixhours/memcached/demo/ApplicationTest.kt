@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner
  * @author Igor Bolic
  */
 @RunWith(SpringRunner::class)
-@SpringBootTest(classes = arrayOf(TestApplication::class), webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ApplicationTest {
 
     @Autowired
