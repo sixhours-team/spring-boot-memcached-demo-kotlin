@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.cache.CacheManager
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager
+import org.springframework.cache.support.NoOpCacheManager
 import org.springframework.test.context.junit4.SpringRunner
 
 /**
@@ -36,19 +37,17 @@ class ApplicationTest {
         assertThat(response.body, `is`(expected))
     }
 
-    @Test(timeout = 4000)
-    fun thatSearchByTitleUsesCachedData() {
+    @Test
+    fun thatSearchByTitleReturnsBook() {
         val expected = "[{\"id\":4,\"title\":\"Kotlin\",\"year\":2017}]"
 
-        val firstResponse = restTemplate.getForEntity("/books/Kotlin", String::class.java)
-        val secondResponse = restTemplate.getForEntity("/books/Kotlin", String::class.java)
+        val response = restTemplate.getForEntity("/books/Kotlin", String::class.java)
 
-        assertThat(firstResponse.body, `is`(expected))
-        assertThat(secondResponse.body, `is`(expected))
+        assertThat(response.body, `is`(expected))
     }
 
     @Test
     fun thatCacheManagerIsLoaded() {
-        assertThat(cacheManager, instanceOf(ConcurrentMapCacheManager::class.java))
+        assertThat(cacheManager, instanceOf(NoOpCacheManager::class.java))
     }
 }
