@@ -1,7 +1,7 @@
 # Spring Boot Memcached Demo
 
 This is a demo project showing the usage of [Memcached Spring Boot](https://github.com/igorbolic/memcached-spring-boot) cache library in a Spring Boot application.
-You will have to have Docker installed in order to run this demo.
+You will have to have [Docker](https://www.docker.com/get-docker) installed in order to run this demo.
 
 ## Testing
 
@@ -16,7 +16,7 @@ Build a Docker image for the demo application by running:
 
     ./gradlew clean buildDocker
 
-This will create the `sb-memcached-demo` Docker image in your machine's local Docker image registry. 
+This will create the `spring-boot-memcached-demo-kotlin` Docker image in your machine's local Docker image registry. 
 To start a memcached server and the demo application, run:
 
     docker-compose -f src/main/docker/app.yml up -d

@@ -1,6 +1,6 @@
 buildscript {
-    ext.kotlin_version = '1.1.4-3'
-    ext.spring_boot_version = '1.5.7.RELEASE'
+    ext.kotlin_version = '1.1.60'
+    ext.spring_boot_version = '1.5.8.RELEASE'
 
     repositories {
         jcenter()
@@ -32,9 +32,9 @@ repositories {
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
-    compile("org.jetbrains.kotlin:kotlin-reflect")
-    compile "org.springframework.boot:spring-boot-starter-web"
+    compile 'org.jetbrains.kotlin:kotlin-stdlib-jre8'
+    compile 'org.jetbrains.kotlin:kotlin-reflect'
+    compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'io.sixhours:memcached-spring-boot-starter:1.0.1'
 
     testCompile "org.springframework.boot:spring-boot-starter-test"
