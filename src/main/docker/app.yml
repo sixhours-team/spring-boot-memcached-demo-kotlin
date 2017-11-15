@@ -1,10 +1,14 @@
-version: '2'
+version: '3'
 services:
   demo-app:
-    image: spring-boot-memcached-demo
+    image: spring-boot-memcached-demo-kotlin
     ports:
       - 8080:8080
-  memcached:
-    extends:
-      file: memcached.yml
-      service: memcached
+  memcached-1:
+    image: memcached:alpine
+    ports:
+      - 11211:11211
+  memcached-2:
+    image: memcached:alpine
+    ports:
+      - 11212:11211
