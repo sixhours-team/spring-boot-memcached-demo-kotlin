@@ -1,6 +1,6 @@
 # Spring Boot Memcached Demo
 
-This is a demo project showing the usage of [Memcached Spring Boot](https://github.com/igorbolic/memcached-spring-boot) cache library in a Spring Boot application.
+This is an example project showing the usage of [Memcached Spring Boot](https://github.com/igorbolic/memcached-spring-boot) cache library in a Spring Boot application.
 You will have to have [Docker](https://www.docker.com/get-docker) installed in order to run this demo.
 
 ## Testing
