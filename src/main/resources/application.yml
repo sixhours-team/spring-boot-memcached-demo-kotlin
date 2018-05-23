@@ -1,5 +1,5 @@
 memcached:
   cache:
     servers: memcached-1:11211, memcached-2:11211
-    expiration: 3600
+    expirations: 3600
     protocol: binary
